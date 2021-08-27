@@ -9,7 +9,7 @@
       "type": "Feature",
       "properties": {
         "@id": "relation/307107",
-        "name": "Дрлина реки Яуза",
+        "name": "Долина реки Яуза",
         "leisure": "park",
         "type": "multipolygon"
       },
@@ -6335,7 +6335,7 @@
       "type": "Feature",
       "properties": {
         "@id": "relation/286879",
-        "name": "Дрлина реки Яуза",
+        "name": "Долина реки Яуза",
         "leisure": "park",
         "type": "multipolygon"
       },
@@ -11095,7 +11095,7 @@
       "type": "Feature",
       "properties": {
         "@id": "relation/1490891",
-        "name": "Дрлина реки Яуза",
+        "name": "Долина реки Яуза",
         "leisure": "park",
         "type": "multipolygon"
       },
@@ -18255,7 +18255,7 @@
       "type": "Feature",
       "properties": {
         "@id": "relation/7657801",
-        "name": "Дрлина реки Яуза",
+        "name": "Долина реки Яуза",
         "leisure": "park",
         "type": "multipolygon"
       },

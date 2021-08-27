@@ -1,2 +1,2 @@
 # Summary
-App allows list and display on map parks described in geoJSON file.
+App allows you to browse list of parks and display them on the map. Parks data is fetching from geoJSON file.

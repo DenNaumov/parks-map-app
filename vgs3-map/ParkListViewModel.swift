@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 
 class ParkListViewModel: NSObject {
+
     let defaultCenterLocation = CLLocationCoordinate2D(latitude: 55.8383, longitude: 37.6171)
     var model = Model()
     var parks = [ParkViewModel]()
@@ -35,21 +36,21 @@ class ParkListViewModel: NSObject {
         super.init()
         loadParks()
     }
-    
+
     private func loadParks() {
         guard let url = Bundle.main.url(forResource: "parks", withExtension: ".geojson") else {
             fatalError("GeoJSON file not found")
         }
         if let data = try? Data(contentsOf: url) {
-            parse(geoJsonData: data)
+            saveToModel(geoJsonData: data)
         }
     }
-    
-    private func parse(geoJsonData: Data) {
+
+    private func saveToModel(geoJsonData: Data) {
         guard let features = try? MKGeoJSONDecoder().decode(geoJsonData) as? [MKGeoJSONFeature] else {
             fatalError("GeoJSON file has wrong format")
         }
-        
+
         model.parks = features.compactMap { Park(from: $0) }
         parks = model.parks.compactMap { ParkViewModel(from: $0) }
     }

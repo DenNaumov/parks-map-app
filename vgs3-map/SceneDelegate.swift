@@ -11,9 +11,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var isMap = false
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        // get Window Scene
+        // get ws root VC
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 }

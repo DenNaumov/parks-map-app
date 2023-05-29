@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ListViewController: UITableViewController {
+//TODO: make switch between map and list VCs
+class ParkListView: UITableViewController {
 
     var viewModel = ParkListViewModel()
     
@@ -24,16 +24,30 @@ class ListViewController: UITableViewController {
 }
 
 // MARK: Setup
-extension ListViewController {
-    
+extension ParkListView {
+
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
     }
-    
+
     private func setupNavigationBar() {
-        navigationItem.title = nil
+
+        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+            navigationBar.barTintColor = UIColor.lightGray
+            view.addSubview(navigationBar)
+
+            let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
+            let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil)
+
+            let navigationItem = UINavigationItem(title: "Title")
+            navigationItem.leftBarButtonItem = cancelButton
+            navigationItem.rightBarButtonItem = doneButton
+
+            navigationBar.items = [navigationItem]
+
+        navigationItem.title = "Parks list"
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Show on map",
             style: .plain,
@@ -48,27 +62,28 @@ extension ListViewController {
 }
 
 // MARK: Transition
-extension ListViewController {
+extension ParkListView {
 
     private func goToMap() {
+        
         performSegue(withIdentifier: "toMap", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? MapViewController else { return }
+        guard let destinationVC = segue.destination as? MapView else { return }
         destinationVC.viewModel = viewModel
     }
 }
 
 // MARK: UITableViewDataSource, UITableViewDelegate
-extension ListViewController {
+extension ParkListView {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.parks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "table-cell", for: indexPath) as! TableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "table-cell", for: indexPath) as? ParkItemTableViewCell else { fatalError() }
         cell.setup(with: viewModel.parks[indexPath.item])
         return cell
     }

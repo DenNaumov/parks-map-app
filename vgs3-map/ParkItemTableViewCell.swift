@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class ParkItemTableViewCell: UITableViewCell {
 
     func setup(with park: ParkViewModel) {
         textLabel?.text = park.displayName

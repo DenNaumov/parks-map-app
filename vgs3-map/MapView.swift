@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapView: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     private let locationManager = CLLocationManager()
@@ -34,7 +34,7 @@ class MapViewController: UIViewController {
 }
 
 // MARK: setup
-extension MapViewController {
+extension MapView {
    
     private func setupMap() {
         guard
@@ -69,7 +69,7 @@ extension MapViewController {
     }
 }
 
-extension MapViewController: MKMapViewDelegate {
+extension MapView: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotationviewModel = annotation as? AnnotationViewModel else { fatalError() }
@@ -88,7 +88,7 @@ extension MapViewController: MKMapViewDelegate {
 }
 
 // MARK: location manager
-extension MapViewController: CLLocationManagerDelegate {
+extension MapView: CLLocationManagerDelegate {
 
     private func setupLocationManager() {
         locationManager.delegate = self

@@ -18,7 +18,7 @@ class MapView: UIViewController {
 
     var viewModel: ParkListViewModel?
     private var displayedAnnotations = [MKAnnotation]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +26,7 @@ class MapView: UIViewController {
         setupNavBar()
         setupMap()
     }
-    
+
     private func setupNavBar() {
         navigationItem.leftBarButtonItem?.title = ""
         navigationItem.rightBarButtonItem = MKUserTrackingBarButtonItem(mapView: mapView)
@@ -35,14 +35,14 @@ class MapView: UIViewController {
 
 // MARK: setup
 extension MapView {
-   
+
     private func setupMap() {
         guard
             let displayedParks = viewModel?.getDisplayedParks(),
             let centerPoint = viewModel?.centerPoint,
             let mapBoundary = viewModel?.mapBoundary
         else { return }
-        
+
         mapView.delegate = self
         mapView.centerTo(centerPoint)
         mapView.setCameraBoundary(mapBoundary, animated: false)
@@ -94,7 +94,7 @@ extension MapView: CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
-    
+
     private func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
@@ -102,7 +102,7 @@ extension MapView: CLLocationManagerDelegate {
         } else {
         }
     }
-    
+
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:

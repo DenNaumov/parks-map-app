@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		9238E92526C067AB0088A334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E92426C067AB0088A334 /* AppDelegate.swift */; };
 		9238E92726C067AB0088A334 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E92626C067AB0088A334 /* SceneDelegate.swift */; };
-		9238E92926C067AB0088A334 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E92826C067AB0088A334 /* ListViewController.swift */; };
+		9238E92926C067AB0088A334 /* ParkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E92826C067AB0088A334 /* ParkListView.swift */; };
 		9238E92C26C067AB0088A334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9238E92A26C067AB0088A334 /* Main.storyboard */; };
 		9238E92E26C067AF0088A334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9238E92D26C067AF0088A334 /* Assets.xcassets */; };
 		9238E93126C067AF0088A334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9238E92F26C067AF0088A334 /* LaunchScreen.storyboard */; };
 		9238E93926C06B960088A334 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E93826C06B960088A334 /* Model.swift */; };
-		9238E93B26C06E9F0088A334 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E93A26C06E9F0088A334 /* TableViewCell.swift */; };
+		9238E93B26C06E9F0088A334 /* ParkItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E93A26C06E9F0088A334 /* ParkItemTableViewCell.swift */; };
 		9238E93D26C0FDD80088A334 /* ParkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E93C26C0FDD80088A334 /* ParkListViewModel.swift */; };
-		9238E94126C123060088A334 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E94026C123060088A334 /* MapViewController.swift */; };
+		9238E94126C123060088A334 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238E94026C123060088A334 /* MapView.swift */; };
+		9275CED3286746DE00628B29 /* ParksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275CED2286746DE00628B29 /* ParksViewController.swift */; };
 		92A399E726C974590016B83A /* parks.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 92A399E626C970ED0016B83A /* parks.geojson */; };
 		92BB7BDE26C260B300865A3E /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB7BDD26C260B300865A3E /* Park.swift */; };
 		92E3E03F26D6206F007D8F67 /* AnnotationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E3E03E26D6206F007D8F67 /* AnnotationViewModel.swift */; };
@@ -27,16 +28,16 @@
 		9238E92126C067AB0088A334 /* vgs3-map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vgs3-map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9238E92426C067AB0088A334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9238E92626C067AB0088A334 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9238E92826C067AB0088A334 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		9238E92826C067AB0088A334 /* ParkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkListView.swift; sourceTree = "<group>"; };
 		9238E92B26C067AB0088A334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9238E92D26C067AF0088A334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9238E93026C067AF0088A334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9238E93226C067AF0088A334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9238E93826C06B960088A334 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		9238E93A26C06E9F0088A334 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9238E93A26C06E9F0088A334 /* ParkItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemTableViewCell.swift; sourceTree = "<group>"; };
 		9238E93C26C0FDD80088A334 /* ParkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkListViewModel.swift; sourceTree = "<group>"; };
-		9238E94026C123060088A334 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		925CF1CB26CC745D00504A63 /* MapViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController 2.swift"; sourceTree = "<group>"; };
+		9238E94026C123060088A334 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9275CED2286746DE00628B29 /* ParksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksViewController.swift; sourceTree = "<group>"; };
 		92A399E626C970ED0016B83A /* parks.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = parks.geojson; sourceTree = "<group>"; };
 		92BB7BDD26C260B300865A3E /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
 		92E3E03E26D6206F007D8F67 /* AnnotationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +96,9 @@
 		92BB7BDF26C260BF00865A3E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				9238E92F26C067AF0088A334 /* LaunchScreen.storyboard */,
+				9238E92A26C067AB0088A334 /* Main.storyboard */,
+				9275CED2286746DE00628B29 /* ParksViewController.swift */,
 				9238E92D26C067AF0088A334 /* Assets.xcassets */,
 				9238E93226C067AF0088A334 /* Info.plist */,
 				9238E92426C067AB0088A334 /* AppDelegate.swift */,
@@ -107,12 +111,9 @@
 		92BB7BE026C260D900865A3E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9238E92F26C067AF0088A334 /* LaunchScreen.storyboard */,
-				9238E92A26C067AB0088A334 /* Main.storyboard */,
-				9238E92826C067AB0088A334 /* ListViewController.swift */,
-				9238E93A26C06E9F0088A334 /* TableViewCell.swift */,
-				9238E94026C123060088A334 /* MapViewController.swift */,
-				925CF1CB26CC745D00504A63 /* MapViewController 2.swift */,
+				9238E92826C067AB0088A334 /* ParkListView.swift */,
+				9238E93A26C06E9F0088A334 /* ParkItemTableViewCell.swift */,
+				9238E94026C123060088A334 /* MapView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -208,15 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9238E93B26C06E9F0088A334 /* TableViewCell.swift in Sources */,
-				9238E92926C067AB0088A334 /* ListViewController.swift in Sources */,
+				9238E93B26C06E9F0088A334 /* ParkItemTableViewCell.swift in Sources */,
+				9238E92926C067AB0088A334 /* ParkListView.swift in Sources */,
 				9238E93D26C0FDD80088A334 /* ParkListViewModel.swift in Sources */,
 				92E3E04126D62096007D8F67 /* ParkViewModel.swift in Sources */,
 				92E3E03F26D6206F007D8F67 /* AnnotationViewModel.swift in Sources */,
 				92BB7BDE26C260B300865A3E /* Park.swift in Sources */,
 				9238E92526C067AB0088A334 /* AppDelegate.swift in Sources */,
 				9238E92726C067AB0088A334 /* SceneDelegate.swift in Sources */,
-				9238E94126C123060088A334 /* MapViewController.swift in Sources */,
+				9238E94126C123060088A334 /* MapView.swift in Sources */,
+				9275CED3286746DE00628B29 /* ParksViewController.swift in Sources */,
 				9238E93926C06B960088A334 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
